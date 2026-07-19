@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" role="img" aria-labelledby="title desc">
+  <title id="title">SecureSmart</title><desc id="desc">SecureSmart interlocking SS fintech mark</desc>
+  <defs><linearGradient id="g" x1="8" y1="8" x2="72" y2="72" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981"/><stop offset="1" stop-color="#1E3A8A"/></linearGradient></defs>
+  <path fill="url(#g)" d="M40 4 68 16v21c0 18-11 31-28 39C23 68 12 55 12 37V16L40 4Z"/><path fill="#fff" d="M48.8 22.4c-2.1-2.1-5.2-3.3-8.8-3.3-6.6 0-11.2 3.2-11.2 8.1 0 5.4 4.7 6.8 10.3 8.1 5.2 1.3 7.6 1.9 7.6 4.8 0 2.5-2.6 4-6.5 4-4.3 0-7.9-1.6-10.6-4.5l-4.3 5c3.7 4 8.6 6.1 14.6 6.1 8.2 0 13.8-3.9 13.8-10.1 0-6.3-5.3-7.9-11.1-9.3-4.8-1.1-6.9-1.7-6.9-4.1 0-2.1 2-3.5 5.4-3.5 3.1 0 5.8 1.1 8 3.1l4.5-4.4Z"/><text x="92" y="51" fill="#102A43" font-family="Inter, Arial, sans-serif" font-size="35" font-weight="750" letter-spacing="-1.2">Secure<tspan fill="#10B981">Smart</tspan></text>
+</svg>

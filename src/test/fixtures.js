@@ -1,0 +1,4 @@
+export const accounts=[{id:'bank',name:'SBI Savings',type:'Bank',current_balance:42500,opening_balance:40000,is_active:true,include_in_net_worth:true,currency:'INR'},{id:'card',name:'Credit Card',type:'Credit Card',current_balance:-12800,opening_balance:-9000,is_active:true,include_in_net_worth:true,currency:'INR'}]
+export const transactions=[{id:'1',title:'Salary',amount:95000,transactionType:'income',date:'2026-07-01',category:'Salary',accountId:'bank'},{id:'2',title:'Groceries',amount:12000,transactionType:'expense',date:'2026-07-10',category:'Food & Dining',accountId:'bank'},{id:'3',title:'Rent',amount:20000,transactionType:'expense',date:'2026-07-05',category:'Bills',accountId:'bank'}]
+export const budgets=[{id:'b1',name:'Food',monthly_limit:15000,period:'monthly',month:'2026-07-01'}]
+export const goals=[{id:'g1',name:'Emergency fund',category:'Emergency Fund',goal_amount:180000,current_amount:60000,monthly_contribution:10000,target_date:'2027-01-01'}]

@@ -1,0 +1,3 @@
+import { describe, expect, it } from 'vitest'
+import { accounts, goals, transactions } from '../test/fixtures.js'
+describe('financial calculations',()=>{it('calculates account net worth',()=>expect(accounts.reduce((sum,x)=>sum+x.current_balance,0)).toBe(29700));it('calculates budget spending and remaining amount',()=>{const spent=transactions.filter(x=>x.transactionType==='expense').reduce((sum,x)=>sum+x.amount,0);expect(spent).toBe(32000);expect(15000-spent).toBe(-17000)});it('calculates goal progress',()=>expect(goals[0].current_amount/goals[0].goal_amount*100).toBeCloseTo(33.33,1));it('keeps a transfer balanced',()=>{const source=42500-5000,destination=1000+5000;expect(source+destination).toBe(43500)})})

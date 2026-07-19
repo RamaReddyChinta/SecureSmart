@@ -1,0 +1,7 @@
+import { supabaseRequest } from './client.js'
+const map = row => ({ id: row.id, title: row.merchant || row.notes || row.categories?.name || 'Transaction', amount: Number(row.amount), category: row.categories?.name || 'Uncategorized', date: row.date, time: row.time, note: row.notes || '', merchant: row.merchant || '', tags: row.tags || [], paymentMethod: row.payment_method || '', receiptPath: row.receipt_path, recurringFrequency: row.recurring_frequency, transactionType: row.transaction_type, categoryId: row.category_id, accountId: row.account_id, transferId: row.transfer_id })
+export const listTransactions = token => supabaseRequest('/rest/v1/transactions?select=*,categories(name)&order=date.desc,time.desc', { accessToken: token }).then(rows => rows.map(map))
+export const createTransaction = (token, transaction) => supabaseRequest('/rest/v1/transactions', { method: 'POST', accessToken: token, body: transaction, headers: { Prefer: 'return=representation' } }).then(rows => map(rows[0]))
+export const updateTransaction = (token, id, transaction) => supabaseRequest(`/rest/v1/transactions?id=eq.${id}`, { method: 'PATCH', accessToken: token, body: transaction, headers: { Prefer: 'return=representation' } }).then(rows => map(rows[0]))
+export const deleteTransaction = (token, id) => supabaseRequest(`/rest/v1/transactions?id=eq.${id}`, { method: 'DELETE', accessToken: token })
+export const createTransfer = (token, transfer) => supabaseRequest('/rest/v1/rpc/create_transfer', { method: 'POST', accessToken: token, body: transfer })
