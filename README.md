@@ -47,3 +47,4 @@ It imports `react`, `lucide-react`, `recharts`, and Tailwind utility classes. Th
 3. Make account balances derived from transaction records, not independently editable display values.
 4. Add scheduled server-side processing for recurring templates, and create corresponding transactions idempotently.
 5. Add validation, tests, CSV export, accessibility review, and an encrypted backup/export strategy before handling real financial data.
+
